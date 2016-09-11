@@ -115,7 +115,7 @@ class SOM:
 		"""
 		Returns the index of the units in the network that best match each batch_input vector.
 		"""
-		indices = self.session.run([self.bmu_index], {self.input_placeholder_:batch_input, self.current_iteration:self.num_iterations})
+		indices = self.session.run([self.bmu_index], {self.input_placeholder:batch_input, self.current_iteration:self.num_iterations})
 
 		return indices
 
@@ -124,7 +124,7 @@ class SOM:
 		"""
 		Returns the activation value of the units in the network that best match each batch_input vector.
 		"""
-		activity = self.session.run([self.bmu_activity], {self.input_placeholder_:batch_input, self.current_iteration:self.num_iterations})
+		activity = self.session.run([self.bmu_activity], {self.input_placeholder:batch_input, self.current_iteration:self.num_iterations})
 
 		return activity
 
